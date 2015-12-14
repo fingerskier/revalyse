@@ -1,0 +1,22 @@
+<head>
+	<title>App Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+	{{> main}}
+</body>
+
+<template name="main">
+	<header>Header</header>
+	
+	{{#each tags}}
+		{{> tag}}
+	{{/each}}
+	
+	<footer>Footer</footer>
+</template>
+
+<template name="tag">
+	<{{tagType}} {{attr1}}="{{val1}}" {{attr2}}="{{val2}}"></{{tagType}}>
+</template>
